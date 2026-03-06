@@ -31,6 +31,7 @@ void setup() {
 
   WiFi.begin(ssid, password);
 
+  //checking if esp32 connected to WiFi
   while (WiFi.status() != WL_CONNECTED) {
     display.clearDisplay();
 
@@ -45,6 +46,7 @@ void setup() {
 }
 
 void loop() {
+  //getting time 
   auto now = chrono::system_clock::now();
 
   time_t now_t = chrono::system_clock::to_time_t(now);
@@ -52,6 +54,8 @@ void loop() {
 
   char buffer[32];
   strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &now_tm);
+
+  //put all data on screen
 
   display.clearDisplay();
 
