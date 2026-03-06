@@ -14,8 +14,8 @@
 
 using namespace std;
 
-const char* ssid = "Viktar";
-const char* password = "vikter25032011AJAX";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
